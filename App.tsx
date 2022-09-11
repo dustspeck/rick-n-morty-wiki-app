@@ -1,25 +1,16 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {StatusBar, useColorScheme} from 'react-native';
+import MainStack from './src/navigations/index';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <SafeAreaView>
+    <NavigationContainer>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Text>{'React Native App'}</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+      <MainStack />
+    </NavigationContainer>
   );
 };
 
