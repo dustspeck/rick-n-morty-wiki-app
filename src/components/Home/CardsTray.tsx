@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Dimensions, FlatList} from 'react-native';
+import {StyleSheet, View, Dimensions, FlatList} from 'react-native';
 import React from 'react';
 import ProfileCard from '../Profile/ProfileCard';
 import Header from './Header';
@@ -184,9 +184,10 @@ const CardsTray = () => {
           ListFooterComponent={Footer}
           stickyHeaderIndices={[1]}
           data={[{id: -1}, ...testData]}
-          renderItem={({index}) => {
+          renderItem={({index, item}) => {
             if (index === 0) return <FilterBar />;
-            return <ProfileCard />;
+            // @ts-ignore
+            return <ProfileCard character={item} />;
           }}
         />
       </View>

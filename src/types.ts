@@ -19,8 +19,8 @@ interface ILocation {
   url: string;
 }
 
-type IStatus = 'Alive' | 'Dead' | 'unknown';
-type IGender = 'Female' | 'Male' | 'Genderless' | 'unknown';
+export type IStatus = 'Alive' | 'Dead' | 'unknown';
+export type IGender = 'Female' | 'Male' | 'Genderless' | 'unknown';
 
 export interface ICharacter {
   id: number;
