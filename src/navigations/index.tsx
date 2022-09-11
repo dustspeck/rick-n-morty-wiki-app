@@ -1,14 +1,8 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Text} from 'react-native';
+import Home from '../components/Home';
+import Profile from '../components/Profile';
 
 const Stack = createNativeStackNavigator();
-
-const Home = () => {
-  return <Text>Home Screen</Text>;
-};
-const Profile = () => {
-  return <Text>Profile Screen</Text>;
-};
 
 const MainStack = () => {
   return (

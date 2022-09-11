@@ -22,7 +22,7 @@ interface ILocation {
 type IStatus = 'Alive' | 'Dead' | 'unknown';
 type IGender = 'Female' | 'Male' | 'Genderless' | 'unknown';
 
-interface ICharacter {
+export interface ICharacter {
   id: number;
   name: string;
   status: IStatus;
@@ -34,6 +34,7 @@ interface ICharacter {
   image: string;
   episode: string[];
   url: string;
+  created: string;
 }
 
 export interface ICharactersPage extends IPage {
