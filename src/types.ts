@@ -40,3 +40,8 @@ export interface ICharacter {
 export interface ICharactersPage extends IPage {
   results: ICharacter[];
 }
+
+export interface ICharacterFlatList {
+  id: number;
+  character?: ICharacter;
+}

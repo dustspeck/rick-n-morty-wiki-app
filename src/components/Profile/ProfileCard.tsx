@@ -15,27 +15,27 @@ import GenderIndicator from '../common/GenderIndicator';
 
 const {width} = Dimensions.get('screen');
 
-const ProfileCard = ({character}: {character: ICharacter}) => {
+const ProfileCard = ({data}: {data: ICharacter}) => {
   return (
     <TouchableWithoutFeedback>
       <View style={styles.card}>
-        <Image source={{uri: character.image}} style={styles.icon} />
+        <Image source={{uri: data.image}} style={styles.icon} />
         <View style={styles.infoContainer}>
           <View style={styles.info}>
             <Text numberOfLines={1} style={styles.mainText}>
-              {character.name}
+              {data.name}
             </Text>
             <View style={styles.infoRow}>
               <Text style={[styles.subText, {textTransform: 'uppercase'}]}>
-                {character.species}
+                {data.species}
               </Text>
               <Text numberOfLines={1} style={styles.subText}>
-                {character.type}
+                {data.type}
               </Text>
             </View>
             <View style={styles.infoRow}>
-              <CharacterStatus status={character.status} />
-              <GenderIndicator gender={character.gender} />
+              <CharacterStatus status={data.status} />
+              <GenderIndicator gender={data.gender} />
             </View>
           </View>
           <View style={styles.viewContainer}>
