@@ -1,13 +1,23 @@
-import {StyleSheet, Text, View, Dimensions} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  ActivityIndicator,
+} from 'react-native';
 import React from 'react';
-import {BLACK} from '../../constants/colors';
+import {BLACK, GREY} from '../../constants/colors';
 
 const {height} = Dimensions.get('screen');
 
-const Footer = () => {
+const Footer = ({hasListEnded}: {hasListEnded: boolean}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>That's all</Text>
+      {hasListEnded ? (
+        <Text style={styles.text}>That's all</Text>
+      ) : (
+        <ActivityIndicator color={GREY} size="small" />
+      )}
     </View>
   );
 };

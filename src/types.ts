@@ -1,4 +1,4 @@
-interface IPageInfo {
+export interface IPageInfo {
   count: number;
   pages: number;
   next: string | null;
