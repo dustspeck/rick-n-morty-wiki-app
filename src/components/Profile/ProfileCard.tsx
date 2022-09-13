@@ -6,46 +6,51 @@ import {
   Text,
   Image,
 } from 'react-native';
-import React from 'react';
+import React, {memo} from 'react';
 import {BORDER_RADIUS} from '../../constants/styles';
 import {BLACK, CARD_BG, LIGHT_GREY} from '../../constants/colors';
-import CharacterStatus from '../common/StatusIndicator';
+import StatusIndicator from '../common/StatusIndicator';
 import {ICharacter} from '../../types';
 import GenderIndicator from '../common/GenderIndicator';
 
 const {width} = Dimensions.get('screen');
 
-const ProfileCard = ({data}: {data: ICharacter}) => {
-  return (
-    <TouchableWithoutFeedback>
-      <View style={styles.card}>
-        <Image source={{uri: data.image}} style={styles.icon} />
-        <View style={styles.infoContainer}>
-          <View style={styles.info}>
-            <Text numberOfLines={1} style={styles.mainText}>
-              {data.name}
-            </Text>
-            <View style={styles.infoRow}>
-              <Text style={[styles.subText, {textTransform: 'uppercase'}]}>
-                {data.species}
+const ProfileCard = memo(
+  ({data}: {data: ICharacter}) => {
+    return (
+      <TouchableWithoutFeedback>
+        <View style={styles.card}>
+          <Image source={{uri: data.image}} style={styles.icon} />
+          <View style={styles.infoContainer}>
+            <View style={styles.info}>
+              <Text numberOfLines={1} style={styles.mainText}>
+                {data.name}
               </Text>
-              <Text numberOfLines={1} style={styles.subText}>
-                {data.type}
-              </Text>
+              <View style={styles.infoRow}>
+                <Text
+                  numberOfLines={1}
+                  style={[styles.subText, {textTransform: 'uppercase'}]}>
+                  {data.species}
+                </Text>
+                <Text numberOfLines={1} style={styles.subText}>
+                  {data.type}
+                </Text>
+              </View>
+              <View style={styles.infoRow}>
+                <StatusIndicator status={data.status} />
+                <GenderIndicator gender={data.gender} />
+              </View>
             </View>
-            <View style={styles.infoRow}>
-              <CharacterStatus status={data.status} />
-              <GenderIndicator gender={data.gender} />
+            <View style={styles.viewContainer}>
+              <Text style={styles.viewText}>→</Text>
             </View>
-          </View>
-          <View style={styles.viewContainer}>
-            <Text style={styles.viewText}>→</Text>
           </View>
         </View>
-      </View>
-    </TouchableWithoutFeedback>
-  );
-};
+      </TouchableWithoutFeedback>
+    );
+  },
+  (prev, next) => prev.data.id === next.data.id,
+);
 
 export default ProfileCard;
 
