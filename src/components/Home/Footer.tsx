@@ -5,12 +5,12 @@ import {
   Dimensions,
   ActivityIndicator,
 } from 'react-native';
-import React from 'react';
+import React, {memo} from 'react';
 import {BLACK, GREY} from '../../constants/colors';
 
 const {height} = Dimensions.get('screen');
 
-const Footer = ({hasListEnded}: {hasListEnded: boolean}) => {
+const Footer = memo(({hasListEnded}: {hasListEnded: boolean}) => {
   return (
     <View style={styles.container}>
       {hasListEnded ? (
@@ -20,7 +20,7 @@ const Footer = ({hasListEnded}: {hasListEnded: boolean}) => {
       )}
     </View>
   );
-};
+});
 
 export default Footer;
 

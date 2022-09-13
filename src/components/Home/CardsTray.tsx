@@ -1,5 +1,11 @@
-import {StyleSheet, View, Dimensions, FlatList} from 'react-native';
-import React, {useState} from 'react';
+import {
+  StyleSheet,
+  View,
+  Dimensions,
+  FlatList,
+  ListRenderItem,
+} from 'react-native';
+import React, {useCallback, useState} from 'react';
 import ProfileCard from '../Profile/ProfileCard';
 import Header from './Header';
 import {ICharacter, IPageInfo} from '../../types';
@@ -43,6 +49,13 @@ const CardsTray = ({
     }
   };
 
+  const renderItem = useCallback<ListRenderItem<ICharacter>>(
+    renderItem => <ProfileCard data={renderItem.item} />,
+    [],
+  );
+
+  const keyExtractor = useCallback((item: ICharacter) => `id-${item.id}`, []);
+
   return (
     <View>
       <View style={styles.container}>
@@ -52,9 +65,10 @@ const CardsTray = ({
           ListFooterComponent={<Footer hasListEnded={hasListEnded} />} // PERF: using conditional rendering in footer can have minor performance issue at onEndReached
           // stickyHeaderIndices={[0]} // Note: Avoiding sticky headers, not performant for 60fps
           data={characters}
+          keyExtractor={keyExtractor}
           onEndReached={handleOnEndReached}
           onEndReachedThreshold={1}
-          renderItem={({item}) => <ProfileCard data={item} />}
+          renderItem={renderItem}
           windowSize={height}
           initialNumToRender={10}
           removeClippedSubviews={true}

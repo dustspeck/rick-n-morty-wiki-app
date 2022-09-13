@@ -2,9 +2,9 @@ import {
   StyleSheet,
   View,
   Dimensions,
-  TouchableWithoutFeedback,
   Text,
   Image,
+  Pressable,
 } from 'react-native';
 import React, {memo} from 'react';
 import {BORDER_RADIUS} from '../../constants/styles';
@@ -17,8 +17,11 @@ const {width} = Dimensions.get('screen');
 
 const ProfileCard = memo(
   ({data}: {data: ICharacter}) => {
+    const handleOnPress = () => {
+      console.log(data);
+    };
     return (
-      <TouchableWithoutFeedback>
+      <Pressable onPress={handleOnPress}>
         <View style={styles.card}>
           <Image source={{uri: data.image}} style={styles.icon} />
           <View style={styles.infoContainer}>
@@ -46,7 +49,7 @@ const ProfileCard = memo(
             </View>
           </View>
         </View>
-      </TouchableWithoutFeedback>
+      </Pressable>
     );
   },
   (prev, next) => prev.data.id === next.data.id,
