@@ -1,8 +1,14 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../components/Home';
 import Profile from '../components/Profile';
+import {ICharacter} from '../types';
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  Profile: {data: ICharacter};
+  Home: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const MainStack = () => {
   return (

@@ -12,13 +12,18 @@ import {BLACK, CARD_BG, LIGHT_GREY} from '../../constants/colors';
 import StatusIndicator from '../common/StatusIndicator';
 import {ICharacter} from '../../types';
 import GenderIndicator from '../common/GenderIndicator';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../navigations';
 
 const {width} = Dimensions.get('screen');
 
 const ProfileCard = memo(
   ({data}: {data: ICharacter}) => {
+    const navigation =
+      useNavigation<NativeStackNavigationProp<RootStackParamList>>();
     const handleOnPress = () => {
-      console.log(data);
+      navigation.navigate('Profile', {data});
     };
     return (
       <Pressable onPress={handleOnPress}>
