@@ -1,7 +1,8 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {IStatus} from '../../types';
-import {GREEN, GREY, LIGHT_GREY, RED} from '../../constants/colors';
+import {LIGHT_GREY} from '../../constants/colors';
+import {selectStatusColor} from '../../utils/style';
 
 const StatusIndicator = ({status}: {status: IStatus}) => {
   return (
@@ -10,8 +11,7 @@ const StatusIndicator = ({status}: {status: IStatus}) => {
         style={[
           styles.indicator,
           {
-            backgroundColor:
-              status === 'Dead' ? RED : status === 'Alive' ? GREEN : GREY,
+            backgroundColor: selectStatusColor(status),
           },
         ]}
       />
