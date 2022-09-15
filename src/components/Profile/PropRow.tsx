@@ -25,6 +25,7 @@ const PropRow = ({
     if (onPress) onPress();
   };
 
+  // Determines the structure of row based on the `expandable` prop
   const rowWrapper = (children: ReactNode, ExpandedChild: React.ReactNode) =>
     expandable ? (
       <View>

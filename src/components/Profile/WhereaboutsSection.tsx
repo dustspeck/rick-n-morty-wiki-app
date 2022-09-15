@@ -21,5 +21,5 @@ const WhereaboutsSection = ({origin, location}: WhereaboutsSectionProps) => {
 export default WhereaboutsSection;
 
 const styles = StyleSheet.create({
-  heading: {textAlign: 'center', color: GREY, margin: 5, marginTop: 10},
+  heading: {textAlign: 'center', color: GREY, margin: 5, marginTop: 30},
 });

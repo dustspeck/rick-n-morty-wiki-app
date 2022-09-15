@@ -80,7 +80,7 @@ const LocationExpandedCard = ({
         </Text>
       </Text>
       <Text style={styles.expandedText}>
-        {'# of residents: '}
+        {'Population: '}
         <Text style={styles.underlinedText}>
           {fetchedLocationData.residents.length}
         </Text>
@@ -93,7 +93,6 @@ const styles = StyleSheet.create({
   expandedContainer: {
     backgroundColor: `${CARD_BG}55`,
     borderRadius: BORDER_RADIUS,
-    height: 80,
     padding: BORDER_RADIUS,
     marginHorizontal: '10%',
     marginBottom: 20,

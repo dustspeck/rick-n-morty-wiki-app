@@ -16,7 +16,11 @@ const PropSection = ({character}: {character: ICharacter}) => {
 
   return (
     <View>
-      <Text style={styles.heading}>PROPERTIES</Text>
+      <Text style={styles.heading}>
+        <Text style={{color: `${GREY}33`}}>{'───────     '}</Text>
+        PROPERTIES
+        <Text style={{color: `${GREY}33`}}>{'     ───────'}</Text>
+      </Text>
       {characteristics.map(ch => (
         <PropRow
           key={ch}
