@@ -18,7 +18,14 @@ const SceneBuilder = ({
   return (
     <>
       {showTopBar && <TopBar />}
-      <View style={[styles.default, style]}>{children}</View>
+      <View
+        style={[
+          styles.default,
+          style, // for parent specific styling, can override defaults
+          showTopBar && {paddingTop: 0},
+        ]}>
+        {children}
+      </View>
     </>
   );
 };

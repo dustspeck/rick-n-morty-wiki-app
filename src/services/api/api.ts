@@ -1,6 +1,6 @@
 import axios, {AxiosResponse} from 'axios';
 import {CHARACTERS_ROUTE} from '../../constants/api';
-import {ICharactersPage} from '../../types';
+import {ICharactersPage, ILocationAll} from '../../types';
 import {apiClient} from './config';
 
 /**
@@ -54,6 +54,25 @@ export const getCharactersByURL = async (
     if (!url) return null;
     const response: AxiosResponse = await apiClient.get(`${url}`);
     const data: ICharactersPage = response.data;
+    return data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+/**
+ * Fetches location from the given url.
+ * @param { string} url URL to be fetched from.
+ * @returns {Promise<ILocationAll | null>} Returns the nth location page.
+ * * Returns `null` on errors.
+ */
+export const getLocationByURL = async (
+  url: string,
+): Promise<ILocationAll | null> => {
+  try {
+    if (!url) return null;
+    const response: AxiosResponse = await apiClient.get(`${url}`);
+    const data: ILocationAll = response.data;
     return data;
   } catch (error) {
     console.log(error);

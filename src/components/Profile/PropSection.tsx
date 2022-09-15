@@ -1,11 +1,12 @@
-import {View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {ICharacter} from '../../types';
-import StatRow from './PropRow';
+import PropRow from './PropRow';
+import {GREY} from '../../constants/colors';
 
 type CharacterTypes = keyof ICharacter;
 
-const ProfileStat = ({character}: {character: ICharacter}) => {
+const PropSection = ({character}: {character: ICharacter}) => {
   // Properties of character to be shown in list
   const filter_props = ['gender', 'species', 'status', 'type'];
 
@@ -15,8 +16,9 @@ const ProfileStat = ({character}: {character: ICharacter}) => {
 
   return (
     <View>
+      <Text style={styles.heading}>PROPERTIES</Text>
       {characteristics.map(ch => (
-        <StatRow
+        <PropRow
           key={ch}
           type={ch}
           value={`${character[ch as CharacterTypes]}`}
@@ -26,4 +28,8 @@ const ProfileStat = ({character}: {character: ICharacter}) => {
   );
 };
 
-export default ProfileStat;
+export default PropSection;
+
+const styles = StyleSheet.create({
+  heading: {textAlign: 'center', color: GREY, margin: 5, marginTop: 10},
+});

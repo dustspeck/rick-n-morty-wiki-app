@@ -9,14 +9,15 @@ export interface IPage {
   results: any[];
 }
 
-interface IOrigin {
+export interface ILocation {
   name: string;
   url: string;
 }
 
-interface ILocation {
-  name: string;
-  url: string;
+export interface ILocationAll extends ILocation {
+  type: string;
+  dimension: string;
+  residents: string[];
 }
 
 export type IStatus = 'Alive' | 'Dead' | 'unknown';
@@ -29,7 +30,7 @@ export interface ICharacter {
   species: string;
   type: string;
   gender: IGender;
-  origin: IOrigin;
+  origin: ILocation;
   location: ILocation;
   image: string;
   episode: string[];
