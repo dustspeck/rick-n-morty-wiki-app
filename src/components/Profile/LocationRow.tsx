@@ -74,6 +74,10 @@ const LocationExpandedCard = ({
         <Text style={styles.underlinedText}>{fetchedLocationData.name}</Text>
       </Text>
       <Text style={styles.expandedText}>
+        {'Type  '}
+        <Text style={styles.underlinedText}>{fetchedLocationData.type}</Text>
+      </Text>
+      <Text style={styles.expandedText}>
         {'Dimension  '}
         <Text style={styles.underlinedText}>
           {fetchedLocationData.dimension}
