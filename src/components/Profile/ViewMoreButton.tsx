@@ -2,14 +2,9 @@ import {ActivityIndicator, Pressable, StyleSheet, Text} from 'react-native';
 import React from 'react';
 import {CARD_BG, GREY} from '../../constants/colors';
 import {BORDER_RADIUS} from '../../constants/styles';
+import {IViewMoreButtonProps} from '../../types';
 
-const ViewMoreButton = ({
-  isLoading,
-  onPress,
-}: {
-  isLoading: boolean;
-  onPress: Function;
-}) => {
+const ViewMoreButton = ({isLoading, onPress}: IViewMoreButtonProps) => {
   const handleOnPress = () => {
     onPress();
   };

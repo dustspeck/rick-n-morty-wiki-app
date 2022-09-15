@@ -2,7 +2,7 @@ import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {ILocationAll, ILocation} from '../../types';
 import PropRow from './PropRow';
-import {getLocationByURL} from '../../services/api/api';
+import {getLocationByURL} from '../../api';
 import {CARD_BG, GREY} from '../../constants/colors';
 import {BORDER_RADIUS} from '../../constants/styles';
 

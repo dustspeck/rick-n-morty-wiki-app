@@ -1,13 +1,13 @@
 import {View} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {IEpisode} from '../../types';
+import {IChaptersSectionProps, IEpisode} from '../../types';
 import SectionHeading from './SectionHeading';
-import {getEpisodeByURL} from '../../services/api/api';
+import {getEpisodeByURL} from '../../api';
 import ChapterRow from './ChapterRow';
 import {episodeSortFn} from '../../utils/misc';
 import ViewMoreButton from './ViewMoreButton';
 
-const ChaptersSection = ({episodes}: {episodes: string[]}) => {
+const ChaptersSection = ({episodes}: IChaptersSectionProps) => {
   const total = episodes.length;
   const INITIAL_LOAD_COUNT = 3; // Initial amount of episode to load
   const LOAD_STEP_COUNT = 5; // Episodes to load on every load more request
@@ -20,6 +20,14 @@ const ChaptersSection = ({episodes}: {episodes: string[]}) => {
    * Fetch the episodes data from the urls and merge in `fetchedEpisodes`
    */
   const fetchEpisodes = (urls: string[]) => {
+    /**
+     * Note: Since each fetch request is resolved at different times
+     * episodes are sorted after concatenating it to the fetched episodes.
+     *
+     * Using Promise.all would be a better approach if the list is very long,
+     * since the list is small, forEach-and-sort approach is used to render the episode
+     * as soon as it is fetched.
+     */
     urls.forEach(async url => {
       setIsFetching(true);
 

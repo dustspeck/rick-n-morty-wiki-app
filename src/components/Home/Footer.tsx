@@ -7,10 +7,11 @@ import {
 } from 'react-native';
 import React, {memo} from 'react';
 import {BLACK, GREY} from '../../constants/colors';
+import {IFooterProps} from '../../types';
 
 const {height} = Dimensions.get('screen');
 
-const Footer = memo(({hasListEnded}: {hasListEnded: boolean}) => {
+const Footer = memo(({hasListEnded}: IFooterProps) => {
   return (
     <View style={styles.container}>
       {hasListEnded ? (

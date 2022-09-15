@@ -1,8 +1,9 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {GREY} from '../../constants/colors';
+import {ISectionHeadingProps} from '../../types';
 
-const SectionHeading = ({heading}: {heading: string}) => {
+const SectionHeading = ({heading}: ISectionHeadingProps) => {
   return (
     <View>
       <Text style={styles.heading}>

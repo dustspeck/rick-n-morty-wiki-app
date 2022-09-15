@@ -1,8 +1,9 @@
-import React, {PropsWithChildren} from 'react';
-import {View, ViewStyle, Dimensions, StyleSheet} from 'react-native';
+import React from 'react';
+import {View, Dimensions, StyleSheet} from 'react-native';
 
 import {ROOT_BG} from '../../constants/colors';
 import {ROOT_PADDING} from '../../constants/styles';
+import {ISceneBuilderProps} from '../../types';
 import TopBar from './TopBar';
 
 const {height} = Dimensions.get('screen');
@@ -10,11 +11,7 @@ const {height} = Dimensions.get('screen');
 /**
  * @description SceneBuilder is used to give default styling of every scene.
  */
-const SceneBuilder = ({
-  style,
-  showTopBar,
-  children,
-}: PropsWithChildren<{style?: ViewStyle; showTopBar?: boolean}>) => {
+const SceneBuilder = ({style, showTopBar, children}: ISceneBuilderProps) => {
   return (
     <>
       {showTopBar && <TopBar />}

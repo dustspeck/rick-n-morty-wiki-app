@@ -8,26 +8,18 @@ import {
 import React, {useCallback, useState} from 'react';
 import ProfileCard from '../Profile/ProfileCard';
 import Header from './Header';
-import {ICharacter, IPageInfo} from '../../types';
+import {ICardsTrayProps, ICharacter} from '../../types';
 import Footer from './Footer';
-
-import {getCharactersByURL} from '../../services/api/api';
+import {getCharactersByURL} from '../../api';
 
 const {height} = Dimensions.get('screen');
-
-interface CardsTrayProps {
-  characters: ICharacter[];
-  setCharacters: React.Dispatch<React.SetStateAction<ICharacter[]>>;
-  latestPageInfo: IPageInfo;
-  setLatestPageInfo: React.Dispatch<React.SetStateAction<IPageInfo>>;
-}
 
 const CardsTray = ({
   characters,
   latestPageInfo,
   setCharacters,
   setLatestPageInfo,
-}: CardsTrayProps) => {
+}: ICardsTrayProps) => {
   const [hasListEnded, setHasListEnded] = useState(false); // determine if the entire list has loaded
   const [isFetching, setIsFetching] = useState(false); // makes sure the items are not duplicated on erroneous multiple onEndReached calls
 

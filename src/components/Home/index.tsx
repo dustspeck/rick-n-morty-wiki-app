@@ -1,19 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import {ActivityIndicator} from 'react-native';
 import {BLACK} from '../../constants/colors';
-import {getCharacters} from '../../services/api/api';
+import {getCharacters} from '../../api';
 import {ICharacter, IPageInfo} from '../../types';
 import SceneBuilder from '../common/SceneBuilder';
 import CardsTray from './CardsTray';
 
 const Home = () => {
+  const initPageInfo: IPageInfo = {count: 0, pages: 0, next: null, prev: null};
+
   const [characters, setCharacters] = useState<ICharacter[]>([]);
-  const [latestPageInfo, setLatestPageInfo] = useState<IPageInfo>({
-    count: 0,
-    pages: 0,
-    next: null,
-    prev: null,
-  });
+  const [latestPageInfo, setLatestPageInfo] = useState<IPageInfo>(initPageInfo);
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchCharacters = async () => {
@@ -30,7 +27,7 @@ const Home = () => {
     }
   };
   useEffect(() => {
-    fetchCharacters();
+    fetchCharacters(); //initial page load
   }, []);
 
   return (

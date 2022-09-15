@@ -1,13 +1,9 @@
 import {View} from 'react-native';
 import React from 'react';
-import {ILocation} from '../../types';
 import LocationRow from './LocationRow';
 import SectionHeading from './SectionHeading';
+import {WhereaboutsSectionProps} from '../../types';
 
-interface WhereaboutsSectionProps {
-  origin: ILocation;
-  location: ILocation;
-}
 const WhereaboutsSection = ({origin, location}: WhereaboutsSectionProps) => {
   return (
     <View>

@@ -1,6 +1,6 @@
-import axios, {AxiosResponse} from 'axios';
-import {CHARACTERS_ROUTE} from '../../constants/api';
-import {ICharactersPage, IEpisode, ILocationAll} from '../../types';
+import {AxiosResponse} from 'axios';
+import {CHARACTERS_ROUTE} from '../constants/api';
+import {ICharactersPage, IEpisode, ILocationAll} from '../types';
 import {apiClient} from './config';
 
 /**
@@ -12,27 +12,6 @@ import {apiClient} from './config';
 export const getCharacters = async (): Promise<ICharactersPage | null> => {
   try {
     const response: AxiosResponse = await apiClient.get(CHARACTERS_ROUTE);
-    const data: ICharactersPage = response.data;
-    return data;
-  } catch (error) {
-    console.log(error);
-    return null;
-  }
-};
-
-/**
- * @description Fetches characters of the given page number.
- * @param {number} page Page number to be fetched.
- * @returns {Promise<ICharactersPage | null>} Returns the nth characters page.
- * * Returns `null` on errors.
- */
-export const getCharactersByPage = async (
-  page: number,
-): Promise<ICharactersPage | null> => {
-  try {
-    const response: AxiosResponse = await apiClient.get(
-      `${CHARACTERS_ROUTE}/page=${page}`,
-    );
     const data: ICharactersPage = response.data;
     return data;
   } catch (error) {

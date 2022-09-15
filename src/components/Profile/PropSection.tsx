@@ -1,13 +1,13 @@
 import {View} from 'react-native';
 import React from 'react';
-import {ICharacter} from '../../types';
+import {ICharacter, IPropSectionProps} from '../../types';
 import PropRow from './PropRow';
 
 import SectionHeading from './SectionHeading';
 
 type CharacterTypes = keyof ICharacter;
 
-const PropSection = ({character}: {character: ICharacter}) => {
+const PropSection = ({character}: IPropSectionProps) => {
   // Properties of character to be shown in list
   const filter_props = ['gender', 'species', 'status', 'type'];
 

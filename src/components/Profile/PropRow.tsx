@@ -2,14 +2,7 @@ import {Pressable, StyleSheet, Text, View} from 'react-native';
 import React, {ReactNode, useState} from 'react';
 import {CARD_BG, GREY} from '../../constants/colors';
 import {BORDER_RADIUS} from '../../constants/styles';
-
-interface PropRowPros {
-  type: string;
-  value: string;
-  expandable?: boolean;
-  onPress?: Function;
-  ExpandedChild?: React.ReactNode;
-}
+import {PropRowProps} from '../../types';
 
 const PropRow = ({
   type,
@@ -17,7 +10,7 @@ const PropRow = ({
   expandable,
   ExpandedChild,
   onPress,
-}: PropRowPros) => {
+}: PropRowProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handlePress = () => {

@@ -1,18 +1,15 @@
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import React from 'react';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import SceneBuilder from '../common/SceneBuilder';
-import {RootStackParamList} from '../../navigations';
 import {BLACK, GREY} from '../../constants/colors';
 import {ROOT_PADDING} from '../../constants/styles';
 import ProfileImage from './ProfileImage';
 import PropSection from './PropSection';
 import WhereaboutsSection from './WhereaboutsSection';
 import ChaptersSection from './ChaptersSection';
+import {IProfileProps} from '../../types';
 
-const Profile = (
-  props: NativeStackScreenProps<RootStackParamList, 'Profile'>,
-) => {
+const Profile = (props: IProfileProps) => {
   const character = props.route.params.data;
 
   return (

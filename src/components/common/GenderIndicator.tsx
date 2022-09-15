@@ -1,25 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {IGender} from '../../types';
+import {IGenderIndicatorProps} from '../../types';
 import {LIGHT_GREY} from '../../constants/colors';
+import {selectGenderSymbol} from '../../utils/style';
 
-const GenderIndicator = ({gender}: {gender: IGender}) => {
-  const genderSymbol = (gender: IGender) => {
-    switch (gender) {
-      case 'Male':
-        return '♂';
-      case 'Female':
-        return '♀';
-      case 'Genderless':
-        return '⚤';
-      default:
-        return '?';
-    }
-  };
+const GenderIndicator = ({gender}: IGenderIndicatorProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        <Text style={styles.indicator}>{`${genderSymbol(gender)} `}</Text>
+        <Text style={styles.indicator}>{`${selectGenderSymbol(gender)} `}</Text>
         {gender}
       </Text>
     </View>

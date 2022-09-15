@@ -5,13 +5,10 @@ import {useNavigation} from '@react-navigation/native';
 
 const TopBar = () => {
   const navigate = useNavigation();
+  const {goBack} = navigate;
   return (
     <View style={styles.container}>
-      <Pressable
-        style={styles.backButtonView}
-        onPress={() => {
-          navigate.goBack();
-        }}>
+      <Pressable style={styles.backButtonView} onPress={goBack}>
         <Text style={styles.backButton}>←</Text>
       </Pressable>
     </View>

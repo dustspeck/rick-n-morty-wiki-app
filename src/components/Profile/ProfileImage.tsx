@@ -1,12 +1,12 @@
 import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {ICharacter} from '../../types';
+import {IProfileImageProps} from '../../types';
 import {selectStatusColor} from '../../utils/style';
 import {GREY} from '../../constants/colors';
 
 const {width} = Dimensions.get('screen');
 
-const ProfileImage = ({character}: {character: ICharacter}) => {
+const ProfileImage = ({character}: IProfileImageProps) => {
   const statusColor = selectStatusColor(character.status);
   return (
     <View>

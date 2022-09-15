@@ -2,9 +2,9 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {CARD_BG, GREY} from '../../constants/colors';
 import {BORDER_RADIUS} from '../../constants/styles';
-import {IEpisode} from '../../types';
+import {IChapterRowProps} from '../../types';
 
-const ChapterRow = ({episode}: {episode: IEpisode}) => {
+const ChapterRow = ({episode}: IChapterRowProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>

@@ -1,10 +1,10 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {IStatus} from '../../types';
+import {IStatusIndicatorProps} from '../../types';
 import {LIGHT_GREY} from '../../constants/colors';
 import {selectStatusColor} from '../../utils/style';
 
-const StatusIndicator = ({status}: {status: IStatus}) => {
+const StatusIndicator = ({status}: IStatusIndicatorProps) => {
   return (
     <View style={styles.container}>
       <View

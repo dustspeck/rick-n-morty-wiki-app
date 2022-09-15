@@ -10,7 +10,7 @@ import React, {memo} from 'react';
 import {BORDER_RADIUS} from '../../constants/styles';
 import {BLACK, CARD_BG, LIGHT_GREY} from '../../constants/colors';
 import StatusIndicator from '../common/StatusIndicator';
-import {ICharacter} from '../../types';
+import {IProfileCardProps} from '../../types';
 import GenderIndicator from '../common/GenderIndicator';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -19,12 +19,14 @@ import {RootStackParamList} from '../../navigations';
 const {width} = Dimensions.get('screen');
 
 const ProfileCard = memo(
-  ({data}: {data: ICharacter}) => {
+  ({data}: IProfileCardProps) => {
     const navigation =
       useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
     const handleOnPress = () => {
       navigation.navigate('Profile', {data});
     };
+
     return (
       <Pressable onPress={handleOnPress}>
         <View style={styles.card}>
