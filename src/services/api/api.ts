@@ -1,6 +1,6 @@
 import axios, {AxiosResponse} from 'axios';
 import {CHARACTERS_ROUTE} from '../../constants/api';
-import {ICharactersPage, ILocationAll} from '../../types';
+import {ICharactersPage, IEpisode, ILocationAll} from '../../types';
 import {apiClient} from './config';
 
 /**
@@ -60,6 +60,7 @@ export const getCharactersByURL = async (
     return null;
   }
 };
+
 /**
  * Fetches location from the given url.
  * @param { string} url URL to be fetched from.
@@ -73,6 +74,26 @@ export const getLocationByURL = async (
     if (!url) return null;
     const response: AxiosResponse = await apiClient.get(`${url}`);
     const data: ILocationAll = response.data;
+    return data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
+/**
+ * Fetches episode from the given url.
+ * @param { string} url URL to be fetched from.
+ * @returns {Promise<IEpisode | null>} Returns the nth episode.
+ * * Returns `null` on errors.
+ */
+export const getEpisodeByURL = async (
+  url: string,
+): Promise<IEpisode | null> => {
+  try {
+    if (!url) return null;
+    const response: AxiosResponse = await apiClient.get(`${url}`);
+    const data: IEpisode = response.data;
     return data;
   } catch (error) {
     console.log(error);

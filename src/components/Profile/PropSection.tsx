@@ -1,8 +1,9 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 import {ICharacter} from '../../types';
 import PropRow from './PropRow';
-import {GREY} from '../../constants/colors';
+
+import SectionHeading from './SectionHeading';
 
 type CharacterTypes = keyof ICharacter;
 
@@ -16,11 +17,7 @@ const PropSection = ({character}: {character: ICharacter}) => {
 
   return (
     <View>
-      <Text style={styles.heading}>
-        <Text style={{color: `${GREY}33`}}>{'───────     '}</Text>
-        PROPERTIES
-        <Text style={{color: `${GREY}33`}}>{'     ───────'}</Text>
-      </Text>
+      <SectionHeading heading="properties" />
       {characteristics.map(ch => (
         <PropRow
           key={ch}
@@ -33,7 +30,3 @@ const PropSection = ({character}: {character: ICharacter}) => {
 };
 
 export default PropSection;
-
-const styles = StyleSheet.create({
-  heading: {textAlign: 'center', color: GREY, margin: 5, marginTop: 10},
-});

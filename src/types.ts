@@ -14,6 +14,12 @@ export interface ILocation {
   url: string;
 }
 
+export interface IEpisode {
+  name: string;
+  episode: string;
+  air_date: string;
+}
+
 export interface ILocationAll extends ILocation {
   type: string;
   dimension: string;

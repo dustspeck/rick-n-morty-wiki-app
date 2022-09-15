@@ -70,17 +70,17 @@ const LocationExpandedCard = ({
   return (
     <View style={styles.expandedContainer}>
       <Text style={styles.expandedText}>
-        {'Name: '}
+        {'Name  '}
         <Text style={styles.underlinedText}>{fetchedLocationData.name}</Text>
       </Text>
       <Text style={styles.expandedText}>
-        {'Dimension: '}
+        {'Dimension  '}
         <Text style={styles.underlinedText}>
           {fetchedLocationData.dimension}
         </Text>
       </Text>
       <Text style={styles.expandedText}>
-        {'Population: '}
+        {'Population  '}
         <Text style={styles.underlinedText}>
           {fetchedLocationData.residents.length}
         </Text>
@@ -99,9 +99,12 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   expandedText: {
-    color: GREY,
+    color: `${GREY}aa`,
+    fontWeight: 'bold',
   },
   underlinedText: {
     textDecorationLine: 'underline',
+    color: GREY,
+    fontWeight: 'normal',
   },
 });

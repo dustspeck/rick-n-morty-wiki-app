@@ -8,6 +8,7 @@ import {ROOT_PADDING} from '../../constants/styles';
 import ProfileImage from './ProfileImage';
 import PropSection from './PropSection';
 import WhereaboutsSection from './WhereaboutsSection';
+import ChaptersSection from './ChaptersSection';
 
 const Profile = (
   props: NativeStackScreenProps<RootStackParamList, 'Profile'>,
@@ -19,10 +20,7 @@ const Profile = (
       <ScrollView
         centerContent
         showsVerticalScrollIndicator={false}
-        style={styles.container}
-        onScrollEndDrag={() => {
-          console.log('ended');
-        }}>
+        style={styles.container}>
         <View>
           {/* Profile Image */}
           <ProfileImage character={character} />
@@ -37,7 +35,8 @@ const Profile = (
             origin={character.origin}
             location={character.location}
           />
-
+          {/* Advanced Properties */}
+          <ChaptersSection episodes={character.episode} />
           {/* End Note */}
           <View style={{height: 200}}>
             <Text style={styles.footerText}>That's all we know!</Text>

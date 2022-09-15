@@ -1,8 +1,8 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 import {ILocation} from '../../types';
-import {GREY} from '../../constants/colors';
 import LocationRow from './LocationRow';
+import SectionHeading from './SectionHeading';
 
 interface WhereaboutsSectionProps {
   origin: ILocation;
@@ -11,7 +11,7 @@ interface WhereaboutsSectionProps {
 const WhereaboutsSection = ({origin, location}: WhereaboutsSectionProps) => {
   return (
     <View>
-      <Text style={styles.heading}>WHEREABOUTS</Text>
+      <SectionHeading heading="whereabouts" />
       <LocationRow type={'Origin'} location={origin} />
       <LocationRow type={'Location'} location={location} />
     </View>
@@ -19,7 +19,3 @@ const WhereaboutsSection = ({origin, location}: WhereaboutsSectionProps) => {
 };
 
 export default WhereaboutsSection;
-
-const styles = StyleSheet.create({
-  heading: {textAlign: 'center', color: GREY, margin: 5, marginTop: 30},
-});
