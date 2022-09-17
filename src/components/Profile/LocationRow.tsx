@@ -68,7 +68,7 @@ const LocationExpandedCard = ({
       </View>
     );
   return (
-    <View style={styles.expandedContainer}>
+    <View testID="LocationExpandedCard.View" style={styles.expandedContainer}>
       <Text style={styles.expandedText}>
         {'Name  '}
         <Text style={styles.underlinedText}>{fetchedLocationData.name}</Text>

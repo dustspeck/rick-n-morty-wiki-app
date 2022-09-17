@@ -28,7 +28,7 @@ const ProfileCard = memo(
     };
 
     return (
-      <Pressable onPress={handleOnPress}>
+      <Pressable testID="ProfileCard.Pressable" onPress={handleOnPress}>
         <View style={styles.card}>
           <Image source={{uri: data.image}} style={styles.icon} />
           <View style={styles.infoContainer}>

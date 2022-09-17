@@ -6,7 +6,7 @@ import {IChapterRowProps} from '../../types';
 
 const ChapterRow = ({episode}: IChapterRowProps) => {
   return (
-    <View style={styles.container}>
+    <View testID="ChapterRow.View" style={styles.container}>
       <View style={styles.header}>
         <Text ellipsizeMode="tail" style={styles.episode}>
           {episode.episode}

@@ -39,7 +39,9 @@ const PropRow = ({
           {value}
         </Text>
         {expandable && (
-          <Text style={[styles.value, styles.expandableButton]}>
+          <Text
+            testID="PropRow.ExpandButton"
+            style={[styles.value, styles.expandableButton]}>
             {isExpanded ? '▲' : '▼'}
           </Text>
         )}

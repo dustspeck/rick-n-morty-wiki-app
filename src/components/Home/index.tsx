@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <SceneBuilder>
-      {isLoading && <ActivityIndicator color={BLACK} />}
+      {isLoading && <ActivityIndicator testID="Home.Loader" color={BLACK} />}
       {!isLoading && (
         <CardsTray
           characters={characters}
