@@ -1,0 +1,934 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Location Row renders correctly with location url 1`] = `
+<View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+  >
+    <View>
+      <View
+        style={
+          {
+            "flexDirection": "row",
+            "marginVertical": 5,
+            "paddingHorizontal": "10%",
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "backgroundColor": "#E4DCCF",
+              "borderRadius": 7,
+              "color": "#476072",
+              "fontSize": 13,
+              "marginRight": 5,
+              "minWidth": "20%",
+              "paddingHorizontal": 10,
+              "paddingVertical": 5,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            }
+          }
+        >
+          TEST
+        </Text>
+        <Text
+          numberOfLines={2}
+          style={
+            [
+              {
+                "backgroundColor": "#E4DCCF55",
+                "borderRadius": 7,
+                "color": "#476072",
+                "flex": 1,
+                "fontSize": 15,
+                "paddingHorizontal": 10,
+                "paddingVertical": 5,
+                "textAlign": "center",
+              },
+              {
+                "borderBottomRightRadius": 0,
+                "borderTopRightRadius": 0,
+              },
+            ]
+          }
+        >
+          test
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "backgroundColor": "#E4DCCF55",
+                "borderRadius": 7,
+                "color": "#476072",
+                "flex": 1,
+                "fontSize": 15,
+                "paddingHorizontal": 10,
+                "paddingVertical": 5,
+                "textAlign": "center",
+              },
+              {
+                "borderBottomLeftRadius": 0,
+                "borderTopLeftRadius": 0,
+                "maxWidth": 30,
+                "padding": 0,
+                "textAlignVertical": "center",
+              },
+            ]
+          }
+          testID="PropRow.ExpandButton"
+        >
+          ▲
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "backgroundColor": "#E4DCCF55",
+        "borderRadius": 14,
+        "marginBottom": 20,
+        "marginHorizontal": "10%",
+        "overflow": "hidden",
+        "padding": 14,
+      }
+    }
+    testID="LocationExpandedCard.View"
+  >
+    <Text
+      style={
+        {
+          "color": "#476072aa",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Name  
+      <Text
+        style={
+          {
+            "color": "#476072",
+            "fontWeight": "normal",
+            "textDecorationLine": "underline",
+          }
+        }
+      />
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#476072aa",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Type  
+      <Text
+        style={
+          {
+            "color": "#476072",
+            "fontWeight": "normal",
+            "textDecorationLine": "underline",
+          }
+        }
+      />
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#476072aa",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Dimension  
+      <Text
+        style={
+          {
+            "color": "#476072",
+            "fontWeight": "normal",
+            "textDecorationLine": "underline",
+          }
+        }
+      />
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#476072aa",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Population  
+      <Text
+        style={
+          {
+            "color": "#476072",
+            "fontWeight": "normal",
+            "textDecorationLine": "underline",
+          }
+        }
+      >
+        1
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Location Row renders correctly without location url 1`] = `
+<View>
+  <View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginVertical": 5,
+          "paddingHorizontal": "10%",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "backgroundColor": "#E4DCCF",
+            "borderRadius": 7,
+            "color": "#476072",
+            "fontSize": 13,
+            "marginRight": 5,
+            "minWidth": "20%",
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+            "textAlign": "center",
+            "textAlignVertical": "center",
+          }
+        }
+      >
+        TEST
+      </Text>
+      <Text
+        numberOfLines={2}
+        style={
+          [
+            {
+              "backgroundColor": "#E4DCCF55",
+              "borderRadius": 7,
+              "color": "#476072",
+              "flex": 1,
+              "fontSize": 15,
+              "paddingHorizontal": 10,
+              "paddingVertical": 5,
+              "textAlign": "center",
+            },
+            false,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Profile renders with chapter view 1`] = `
+[
+  <View
+    style={
+      {
+        "backgroundColor": "#F0EBE3",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "height": 60,
+          "paddingLeft": 5,
+          "width": 60,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#2C3333",
+            "fontSize": 45,
+            "fontWeight": "bold",
+            "textAlignVertical": "center",
+          }
+        }
+      >
+        ←
+      </Text>
+    </View>
+  </View>,
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#F0EBE3",
+          "minHeight": 1334,
+          "padding": 20,
+        },
+        undefined,
+        {
+          "paddingTop": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      centerContent={true}
+      showsVerticalScrollIndicator={false}
+      style={
+        {
+          "marginHorizontal": -20,
+        }
+      }
+    >
+      <View>
+        <View>
+          <View>
+            <Image
+              source={
+                {
+                  "uri": "https://rickandmortyapi.com/api/character/avatar/20.jpeg",
+                }
+              }
+              style={
+                [
+                  {
+                    "borderColor": "#476072",
+                    "borderRadius": 375,
+                    "borderWidth": 4,
+                    "height": 375,
+                    "marginBottom": -16,
+                    "marginHorizontal": 187.5,
+                    "marginTop": 10,
+                    "width": 375,
+                  },
+                  {
+                    "borderColor": "#476072",
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "borderRadius": 5,
+                      "fontSize": 16,
+                      "padding": 2,
+                      "paddingHorizontal": 10,
+                      "textAlign": "center",
+                    },
+                    {
+                      "backgroundColor": "#476072",
+                    },
+                  ]
+                }
+              >
+                UNKNOWN
+              </Text>
+            </View>
+          </View>
+          <Text
+            numberOfLines={2}
+            style={
+              {
+                "color": "#2C3333",
+                "fontSize": 28,
+                "fontWeight": "bold",
+                "padding": 12,
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+          >
+            Ants in my Eyes Johnson
+          </Text>
+          <View>
+            <View>
+              <Text
+                style={
+                  {
+                    "color": "#476072",
+                    "margin": 5,
+                    "marginTop": 30,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    {
+                      "color": "#47607233",
+                    }
+                  }
+                >
+                  ─────     
+                </Text>
+                PROPERTIES
+                <Text
+                  style={
+                    {
+                      "color": "#47607233",
+                    }
+                  }
+                >
+                       ─────
+                </Text>
+              </Text>
+            </View>
+            <View>
+              <View>
+                <View
+                  style={
+                    {
+                      "flexDirection": "row",
+                      "marginVertical": 5,
+                      "paddingHorizontal": "10%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "backgroundColor": "#E4DCCF",
+                        "borderRadius": 7,
+                        "color": "#476072",
+                        "fontSize": 13,
+                        "marginRight": 5,
+                        "minWidth": "20%",
+                        "paddingHorizontal": 10,
+                        "paddingVertical": 5,
+                        "textAlign": "center",
+                        "textAlignVertical": "center",
+                      }
+                    }
+                  >
+                    GENDER
+                  </Text>
+                  <Text
+                    numberOfLines={2}
+                    style={
+                      [
+                        {
+                          "backgroundColor": "#E4DCCF55",
+                          "borderRadius": 7,
+                          "color": "#476072",
+                          "flex": 1,
+                          "fontSize": 15,
+                          "paddingHorizontal": 10,
+                          "paddingVertical": 5,
+                          "textAlign": "center",
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    Male
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View>
+              <View>
+                <View
+                  style={
+                    {
+                      "flexDirection": "row",
+                      "marginVertical": 5,
+                      "paddingHorizontal": "10%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "backgroundColor": "#E4DCCF",
+                        "borderRadius": 7,
+                        "color": "#476072",
+                        "fontSize": 13,
+                        "marginRight": 5,
+                        "minWidth": "20%",
+                        "paddingHorizontal": 10,
+                        "paddingVertical": 5,
+                        "textAlign": "center",
+                        "textAlignVertical": "center",
+                      }
+                    }
+                  >
+                    SPECIES
+                  </Text>
+                  <Text
+                    numberOfLines={2}
+                    style={
+                      [
+                        {
+                          "backgroundColor": "#E4DCCF55",
+                          "borderRadius": 7,
+                          "color": "#476072",
+                          "flex": 1,
+                          "fontSize": 15,
+                          "paddingHorizontal": 10,
+                          "paddingVertical": 5,
+                          "textAlign": "center",
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    Human
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View>
+              <View>
+                <View
+                  style={
+                    {
+                      "flexDirection": "row",
+                      "marginVertical": 5,
+                      "paddingHorizontal": "10%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "backgroundColor": "#E4DCCF",
+                        "borderRadius": 7,
+                        "color": "#476072",
+                        "fontSize": 13,
+                        "marginRight": 5,
+                        "minWidth": "20%",
+                        "paddingHorizontal": 10,
+                        "paddingVertical": 5,
+                        "textAlign": "center",
+                        "textAlignVertical": "center",
+                      }
+                    }
+                  >
+                    STATUS
+                  </Text>
+                  <Text
+                    numberOfLines={2}
+                    style={
+                      [
+                        {
+                          "backgroundColor": "#E4DCCF55",
+                          "borderRadius": 7,
+                          "color": "#476072",
+                          "flex": 1,
+                          "fontSize": 15,
+                          "paddingHorizontal": 10,
+                          "paddingVertical": 5,
+                          "textAlign": "center",
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    unknown
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View>
+              <View>
+                <View
+                  style={
+                    {
+                      "flexDirection": "row",
+                      "marginVertical": 5,
+                      "paddingHorizontal": "10%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "backgroundColor": "#E4DCCF",
+                        "borderRadius": 7,
+                        "color": "#476072",
+                        "fontSize": 13,
+                        "marginRight": 5,
+                        "minWidth": "20%",
+                        "paddingHorizontal": 10,
+                        "paddingVertical": 5,
+                        "textAlign": "center",
+                        "textAlignVertical": "center",
+                      }
+                    }
+                  >
+                    TYPE
+                  </Text>
+                  <Text
+                    numberOfLines={2}
+                    style={
+                      [
+                        {
+                          "backgroundColor": "#E4DCCF55",
+                          "borderRadius": 7,
+                          "color": "#476072",
+                          "flex": 1,
+                          "fontSize": 15,
+                          "paddingHorizontal": 10,
+                          "paddingVertical": 5,
+                          "textAlign": "center",
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    Human with ants in his eyes
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View>
+            <View>
+              <Text
+                style={
+                  {
+                    "color": "#476072",
+                    "margin": 5,
+                    "marginTop": 30,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    {
+                      "color": "#47607233",
+                    }
+                  }
+                >
+                  ─────     
+                </Text>
+                WHEREABOUTS
+                <Text
+                  style={
+                    {
+                      "color": "#47607233",
+                    }
+                  }
+                >
+                       ─────
+                </Text>
+              </Text>
+            </View>
+            <View>
+              <View>
+                <View
+                  style={
+                    {
+                      "flexDirection": "row",
+                      "marginVertical": 5,
+                      "paddingHorizontal": "10%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "backgroundColor": "#E4DCCF",
+                        "borderRadius": 7,
+                        "color": "#476072",
+                        "fontSize": 13,
+                        "marginRight": 5,
+                        "minWidth": "20%",
+                        "paddingHorizontal": 10,
+                        "paddingVertical": 5,
+                        "textAlign": "center",
+                        "textAlignVertical": "center",
+                      }
+                    }
+                  >
+                    ORIGIN
+                  </Text>
+                  <Text
+                    numberOfLines={2}
+                    style={
+                      [
+                        {
+                          "backgroundColor": "#E4DCCF55",
+                          "borderRadius": 7,
+                          "color": "#476072",
+                          "flex": 1,
+                          "fontSize": 15,
+                          "paddingHorizontal": 10,
+                          "paddingVertical": 5,
+                          "textAlign": "center",
+                        },
+                        false,
+                      ]
+                    }
+                  >
+                    unknown
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+              >
+                <View>
+                  <View
+                    style={
+                      {
+                        "flexDirection": "row",
+                        "marginVertical": 5,
+                        "paddingHorizontal": "10%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        {
+                          "backgroundColor": "#E4DCCF",
+                          "borderRadius": 7,
+                          "color": "#476072",
+                          "fontSize": 13,
+                          "marginRight": 5,
+                          "minWidth": "20%",
+                          "paddingHorizontal": 10,
+                          "paddingVertical": 5,
+                          "textAlign": "center",
+                          "textAlignVertical": "center",
+                        }
+                      }
+                    >
+                      LOCATION
+                    </Text>
+                    <Text
+                      numberOfLines={2}
+                      style={
+                        [
+                          {
+                            "backgroundColor": "#E4DCCF55",
+                            "borderRadius": 7,
+                            "color": "#476072",
+                            "flex": 1,
+                            "fontSize": 15,
+                            "paddingHorizontal": 10,
+                            "paddingVertical": 5,
+                            "textAlign": "center",
+                          },
+                          {
+                            "borderBottomRightRadius": 0,
+                            "borderTopRightRadius": 0,
+                          },
+                        ]
+                      }
+                    >
+                      Interdimensional Cable
+                    </Text>
+                    <Text
+                      style={
+                        [
+                          {
+                            "backgroundColor": "#E4DCCF55",
+                            "borderRadius": 7,
+                            "color": "#476072",
+                            "flex": 1,
+                            "fontSize": 15,
+                            "paddingHorizontal": 10,
+                            "paddingVertical": 5,
+                            "textAlign": "center",
+                          },
+                          {
+                            "borderBottomLeftRadius": 0,
+                            "borderTopLeftRadius": 0,
+                            "maxWidth": 30,
+                            "padding": 0,
+                            "textAlignVertical": "center",
+                          },
+                        ]
+                      }
+                      testID="PropRow.ExpandButton"
+                    >
+                      ▼
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View>
+            <View>
+              <Text
+                style={
+                  {
+                    "color": "#476072",
+                    "margin": 5,
+                    "marginTop": 30,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    {
+                      "color": "#47607233",
+                    }
+                  }
+                >
+                  ─────     
+                </Text>
+                FEATURED CHAPTERS
+                <Text
+                  style={
+                    {
+                      "color": "#47607233",
+                    }
+                  }
+                >
+                       ─────
+                </Text>
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "paddingTop": 20,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "backgroundColor": "#E4DCCF55",
+                    "borderRadius": 4.666666666666667,
+                    "marginHorizontal": "10%",
+                    "marginVertical": 1,
+                    "paddingHorizontal": "5%",
+                    "paddingVertical": 8,
+                    "textAlignVertical": "center",
+                    "width": "80%",
+                  }
+                }
+                testID="ChapterRow.View"
+              >
+                <View
+                  style={
+                    {
+                      "flexDirection": "row",
+                      "marginBottom": 4,
+                    }
+                  }
+                >
+                  <Text
+                    ellipsizeMode="tail"
+                    style={
+                      {
+                        "color": "#476072",
+                        "flex": 1,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    S01E01
+                  </Text>
+                  <Text
+                    ellipsizeMode="tail"
+                    style={
+                      {
+                        "color": "#476072aa",
+                        "fontSize": 13,
+                      }
+                    }
+                  >
+                    December 2, 2013
+                  </Text>
+                </View>
+                <Text
+                  ellipsizeMode="tail"
+                  style={
+                    {
+                      "color": "#476072",
+                    }
+                  }
+                >
+                  Pilot
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "height": 200,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#47607255",
+                  "fontSize": 14,
+                  "marginTop": 25,
+                  "textAlign": "center",
+                }
+              }
+            >
+              That's all we know!
+            </Text>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>,
+]
+`;
