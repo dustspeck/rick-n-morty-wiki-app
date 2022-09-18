@@ -3,8 +3,8 @@ import {ActivityIndicator} from 'react-native';
 import {BLACK} from '../../constants/colors';
 import {getCharacters} from '../../api';
 import {ICharacter, IPageInfo} from '../../types';
-import SceneBuilder from '../common/SceneBuilder';
-import CardsTray from './CardsTray';
+import SceneBuilder from '../../components/common/SceneBuilder';
+import CardsTray from '../../components/Home/CardsTray';
 
 const Home = () => {
   const initPageInfo: IPageInfo = {count: 0, pages: 0, next: null, prev: null};

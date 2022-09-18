@@ -1,12 +1,12 @@
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import React from 'react';
-import SceneBuilder from '../common/SceneBuilder';
+import SceneBuilder from '../../components/common/SceneBuilder';
 import {BLACK, GREY} from '../../constants/colors';
 import {ROOT_PADDING} from '../../constants/styles';
-import ProfileImage from './ProfileImage';
-import PropSection from './PropSection';
-import WhereaboutsSection from './WhereaboutsSection';
-import ChaptersSection from './ChaptersSection';
+import ProfileImage from '../../components/Profile/ProfileImage';
+import PropSection from '../../components/Profile/PropSection';
+import WhereaboutsSection from '../../components/Profile/WhereaboutsSection';
+import ChaptersSection from '../../components/Profile/ChaptersSection';
 import {IProfileProps} from '../../types';
 
 const Profile = (props: IProfileProps) => {

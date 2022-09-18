@@ -2,7 +2,7 @@ import {fireEvent, render, waitFor} from '@testing-library/react-native';
 
 import {ICharactersPage} from '../src/types';
 import {getCharacters} from '../src/api';
-import Home from '../src/components/Home';
+import Home from '../src/screens/Home';
 import ProfileCard from '../src/components/Profile/ProfileCard';
 
 const characterPageResponse = {

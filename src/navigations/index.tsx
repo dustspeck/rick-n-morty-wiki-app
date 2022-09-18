@@ -1,6 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Home from '../components/Home';
-import Profile from '../components/Profile';
+import Home from '../screens/Home';
+import Profile from '../screens/Profile';
 import {ICharacter} from '../types';
 
 export type RootStackParamList = {

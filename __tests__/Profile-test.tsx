@@ -1,5 +1,5 @@
 import {fireEvent, render, waitFor} from '@testing-library/react-native';
-import Profile from '../src/components/Profile';
+import Profile from '../src/screens/Profile';
 import {getEpisodeByURL, getLocationByURL} from '../src/api';
 
 import {ICharactersPage, IEpisode, ILocationAll} from '../src/types';
